@@ -18,6 +18,7 @@ spec:
     spec:
       containers:
       - name: orderservice
-        image: <ECR_ORDER_IMAGE>
+        image: 772648344215.dkr.ecr.us-east-2.amazonaws.com/orderservice:latest
         ports:
         - containerPort: 8000
+
