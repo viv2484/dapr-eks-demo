@@ -18,6 +18,7 @@ spec:
     spec:
       containers:
       - name: productservice
-        image: <ECR_PRODUCT_IMAGE>
+        image: 772648344215.dkr.ecr.us-east-2.amazonaws.com/productservice:latest
         ports:
         - containerPort: 8000
+
