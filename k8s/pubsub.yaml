@@ -12,9 +12,6 @@ spec:
     value: "orders-topic"
   - name: sqsQueueName
     value: "orders-queue"
-  # - name: awsAccessKey
-  #   value: "<AWS_ACCESS_KEY>"
-  # - name: awsSecretKey
-  #   value: "<AWS_SECRET_KEY>"
+
 
 
