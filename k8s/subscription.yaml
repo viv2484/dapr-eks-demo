@@ -6,5 +6,5 @@ metadata:
 spec:
   topic: orders                 # must match the topic your publisher is sending
   route: /orders                # endpoint in your orderservice to receive events
-  pubsubname: messagebus        # must match your Dapr pubsub component
+  pubsubname: order-pubsub        # must match your Dapr pubsub component
   version: v1
