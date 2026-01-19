@@ -13,7 +13,8 @@ from dapr.ext.fastapi import DaprApp
 app = FastAPI()
 dapr_app = DaprApp(app)
 
-@dapr_app.subscribe(pubsub_name="messagebus", topic="orders")
+@dapr_app.subscribe(pubsub_name="order-pubsub", topic="orders")
 async def handle_order(data: dict):
     print(f"Received order: {data}")
     return {"status": "ok"}
+
