@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productservice
+  template:
+    metadata:
+      labels:
+        app: productservice
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "productservice"
+        dapr.io/app-port: "8000"
+    spec:
+      containers:
+      - name: productservice
+        image: <ECR_PRODUCT_IMAGE>
+        ports:
+        - containerPort: 8000
