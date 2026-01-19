@@ -33,7 +33,6 @@ dapr-eks-demo/
 │   ├── pubsub.yaml               # Dapr component for AWS SNS/SQS
 │   ├── product-deployment.yaml   # Kubernetes Deployment for ProductService
 │   ├── order-deployment.yaml     # Kubernetes Deployment for OrderService
-│   └── subscription.yaml         # Dapr Subscription linking topic to subscriber
 ├── src/
 │   ├── productservice/           # ProductService source code (publisher)
 │   │   ├── app.py
