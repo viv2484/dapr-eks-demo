@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orderservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orderservice
+  template:
+    metadata:
+      labels:
+        app: orderservice
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "orderservice"
+        dapr.io/app-port: "8000"
+    spec:
+      containers:
+      - name: orderservice
+        image: <ECR_ORDER_IMAGE>
+        ports:
+        - containerPort: 8000
