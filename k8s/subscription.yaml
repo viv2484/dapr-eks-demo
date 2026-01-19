@@ -4,7 +4,6 @@ metadata:
   name: orderservice-sub
   namespace: default
 spec:
-  topic: orders                 # must match the topic your publisher is sending
-  route: /orders                # endpoint in your orderservice to receive events
-  pubsubname: order-pubsub        # must match your Dapr pubsub component
-  version: v1
+  topic: orders                 # must match the topic your publisher sends to
+  route: /orders                # endpoint in orderservice that receives events
+  pubsubname: order-pubsub        # must match your Dapr pubsub component name
